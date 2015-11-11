@@ -80,7 +80,6 @@ public class InterfazUsuario extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
         BotonTabla = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -359,13 +358,6 @@ public class InterfazUsuario extends javax.swing.JFrame {
             }
         });
 
-        jButton4.setText("Ver indice");
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
         jPanel5Layout.setHorizontalGroup(
@@ -379,10 +371,7 @@ public class InterfazUsuario extends javax.swing.JFrame {
                         .addGap(253, 253, 253)
                         .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel18)
-                            .addGroup(jPanel5Layout.createSequentialGroup()
-                                .addComponent(BotonTabla)
-                                .addGap(69, 69, 69)
-                                .addComponent(jButton4))))
+                            .addComponent(BotonTabla)))
                     .addGroup(jPanel5Layout.createSequentialGroup()
                         .addGap(214, 214, 214)
                         .addComponent(LableTableImagen, javax.swing.GroupLayout.PREFERRED_SIZE, 209, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -394,9 +383,7 @@ public class InterfazUsuario extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(BotonTabla)
-                    .addComponent(jButton4))
+                .addComponent(BotonTabla)
                 .addGap(31, 31, 31)
                 .addComponent(jLabel18)
                 .addGap(15, 15, 15)
@@ -562,13 +549,6 @@ public class InterfazUsuario extends javax.swing.JFrame {
          
     }//GEN-LAST:event_BotonTablaActionPerformed
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        // TODO add your handling code here:
-        
-       
-       
-    }//GEN-LAST:event_jButton4ActionPerformed
-
     /**
      * @param args the command line arguments
      */
@@ -621,7 +601,6 @@ public class InterfazUsuario extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
