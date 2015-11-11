@@ -427,8 +427,7 @@ public class InterfazUsuario extends javax.swing.JFrame {
         try{
             JFileChooser jfc = new JFileChooser();
             jfc.showOpenDialog(this);//Muestra un "Open File"
-            File file = jfc.getSelectedFile();
-            
+            File file = jfc.getSelectedFile();            
             LabelImagenPeril.setIcon(new ImageIcon(file.getPath()));
             InputStream fis = new FileInputStream(file);
             imagen = IOUtils.toByteArray(fis);
@@ -504,31 +503,20 @@ public class InterfazUsuario extends javax.swing.JFrame {
                         LableTableImagen.setIcon(new ImageIcon(PersistenciaUsuario.leerId(i).getDatosImagen().getImagen()));
                     }catch(Exception e){
                         LableTableImagen.setText("");
-                    }
-                        
-                     
-                     //if(indiceImagen<=0)indiceImagen=0;
-                     
+                    }     
                     try{
                         
                         Thread.sleep(1000);
                     }catch(InterruptedException ex){
                         
                     }
-                    
                 }
-                
-                
-                //int  =0;
-                
            }
            
         });
        
-        int tamano= PersistenciaUsuario.leerUsuario().size();
-        
-         jTable1.setModel(new javax.swing.table.DefaultTableModel(
-            
+        int tamano= PersistenciaUsuario.leerUsuario().size();        
+         jTable1.setModel(new javax.swing.table.DefaultTableModel(            
             new Object [tamano][3],
             new String [] {
                 "Nombre", "Correo", "Password"
@@ -543,10 +531,7 @@ public class InterfazUsuario extends javax.swing.JFrame {
              indice++;
              
          }
-         t2.start();
-         
-         
-         
+         t2.start();         
     }//GEN-LAST:event_BotonTablaActionPerformed
 
     /**
