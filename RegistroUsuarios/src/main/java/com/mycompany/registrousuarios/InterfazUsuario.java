@@ -20,6 +20,7 @@ import org.apache.commons.io.IOUtils;//Transforma la imagen a bytes
  */
 public class InterfazUsuario extends javax.swing.JFrame {
     public byte[]imagen;
+    
     /**
      * Creates new form InterfazUsuario
      */
@@ -73,6 +74,13 @@ public class InterfazUsuario extends javax.swing.JFrame {
         jLabel17 = new javax.swing.JLabel();
         LabelTImagen = new javax.swing.JLabel();
         ButtonThread = new javax.swing.JButton();
+        jPanel5 = new javax.swing.JPanel();
+        jLabel18 = new javax.swing.JLabel();
+        LableTableImagen = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
+        BotonTabla = new javax.swing.JButton();
+        jButton4 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -128,7 +136,7 @@ public class InterfazUsuario extends javax.swing.JFrame {
                 .addGap(208, 208, 208)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jButton2)
-                    .addComponent(LabelRegistro, javax.swing.GroupLayout.DEFAULT_SIZE, 102, Short.MAX_VALUE))
+                    .addComponent(LabelRegistro, javax.swing.GroupLayout.DEFAULT_SIZE, 249, Short.MAX_VALUE))
                 .addGap(260, 260, 260))
         );
         jPanel1Layout.setVerticalGroup(
@@ -194,7 +202,7 @@ public class InterfazUsuario extends javax.swing.JFrame {
                 .addComponent(jLabel10)
                 .addGap(35, 35, 35)
                 .addComponent(TextoId, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 56, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 203, Short.MAX_VALUE)
                 .addComponent(jButton3)
                 .addGap(185, 185, 185))
             .addGroup(jPanel3Layout.createSequentialGroup()
@@ -302,7 +310,7 @@ public class InterfazUsuario extends javax.swing.JFrame {
                     .addGroup(jPanel4Layout.createSequentialGroup()
                         .addGap(134, 134, 134)
                         .addComponent(ButtonThread)))
-                .addContainerGap(80, Short.MAX_VALUE))
+                .addContainerGap(227, Short.MAX_VALUE))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -331,6 +339,72 @@ public class InterfazUsuario extends javax.swing.JFrame {
         );
 
         jTabbedPane2.addTab("Ver Usuarios", jPanel4);
+
+        jLabel18.setText("Imagen de perfil");
+
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null}
+            },
+            new String [] {
+                "Nombre", "Correo", "Password"
+            }
+        ));
+        jScrollPane1.setViewportView(jTable1);
+
+        BotonTabla.setText("Ver Todos");
+        BotonTabla.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BotonTablaActionPerformed(evt);
+            }
+        });
+
+        jButton4.setText("Ver indice");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
+        jPanel5.setLayout(jPanel5Layout);
+        jPanel5Layout.setHorizontalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel5Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 498, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel5Layout.createSequentialGroup()
+                        .addGap(253, 253, 253)
+                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel18)
+                            .addGroup(jPanel5Layout.createSequentialGroup()
+                                .addComponent(BotonTabla)
+                                .addGap(69, 69, 69)
+                                .addComponent(jButton4))))
+                    .addGroup(jPanel5Layout.createSequentialGroup()
+                        .addGap(214, 214, 214)
+                        .addComponent(LableTableImagen, javax.swing.GroupLayout.PREFERRED_SIZE, 209, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(187, Short.MAX_VALUE))
+        );
+        jPanel5Layout.setVerticalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(BotonTabla)
+                    .addComponent(jButton4))
+                .addGap(31, 31, 31)
+                .addComponent(jLabel18)
+                .addGap(15, 15, 15)
+                .addComponent(LableTableImagen, javax.swing.GroupLayout.DEFAULT_SIZE, 182, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+
+        jTabbedPane2.addTab("Todos Los Usuarios", jPanel5);
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -431,6 +505,70 @@ public class InterfazUsuario extends javax.swing.JFrame {
         
     }//GEN-LAST:event_ButtonThreadActionPerformed
 
+    private void BotonTablaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonTablaActionPerformed
+        // TODO add your handling code here:
+        Thread t2 = new Thread(new Runnable(){
+           @Override
+           public void run() {
+               int i =0;
+                while(true){
+                    try{
+                        i =jTable1.getSelectedRow();                        
+                        LableTableImagen.setIcon(new ImageIcon(PersistenciaUsuario.leerId(i).getDatosImagen().getImagen()));
+                    }catch(Exception e){
+                        LableTableImagen.setText("Sin imagen");
+                    }
+                        
+                     
+                     //if(indiceImagen<=0)indiceImagen=0;
+                     
+                    try{
+                        
+                        Thread.sleep(1000);
+                    }catch(InterruptedException ex){
+                        
+                    }
+                    
+                }
+                
+                
+                //int  =0;
+                
+           }
+           
+        });
+       
+        int tamano= PersistenciaUsuario.leerUsuario().size();
+        
+         jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            
+            new Object [tamano][3],
+            new String [] {
+                "Nombre", "Correo", "Password"
+            }
+        ));
+          
+         int indice =0;
+         for(DatosUsuario usuario : PersistenciaUsuario.leerUsuario()){
+             jTable1.setValueAt(usuario.getNombre(), indice, 0);
+             jTable1.setValueAt(usuario.getCorreo(), indice, 1);
+             jTable1.setValueAt(usuario.getPassword(),indice,2);
+             indice++;
+             
+         }
+         t2.start();
+         
+         
+         
+    }//GEN-LAST:event_BotonTablaActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        // TODO add your handling code here:
+        
+       
+       
+    }//GEN-LAST:event_jButton4ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -467,6 +605,7 @@ public class InterfazUsuario extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton BotonTabla;
     private javax.swing.JButton ButtonThread;
     private javax.swing.JLabel LabelImagenPeril;
     private javax.swing.JLabel LabelRegistro;
@@ -474,6 +613,7 @@ public class InterfazUsuario extends javax.swing.JFrame {
     private javax.swing.JLabel LabelTImagen;
     private javax.swing.JLabel LabelTNombre;
     private javax.swing.JLabel LabelTPassword;
+    private javax.swing.JLabel LableTableImagen;
     private javax.swing.JTextField TextoCorreo;
     private javax.swing.JTextField TextoId;
     private javax.swing.JTextField TextoNombre;
@@ -481,6 +621,7 @@ public class InterfazUsuario extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -490,6 +631,7 @@ public class InterfazUsuario extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -502,7 +644,10 @@ public class InterfazUsuario extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel5;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTabbedPane jTabbedPane2;
+    private javax.swing.JTable jTable1;
     // End of variables declaration//GEN-END:variables
 }
