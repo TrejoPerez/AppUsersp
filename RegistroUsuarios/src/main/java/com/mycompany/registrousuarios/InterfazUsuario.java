@@ -503,7 +503,7 @@ public class InterfazUsuario extends javax.swing.JFrame {
                         i =jTable1.getSelectedRow();                        
                         LableTableImagen.setIcon(new ImageIcon(PersistenciaUsuario.leerId(i).getDatosImagen().getImagen()));
                     }catch(Exception e){
-                        LableTableImagen.setText("Sin imagen");
+                        LableTableImagen.setText("");
                     }
                         
                      
